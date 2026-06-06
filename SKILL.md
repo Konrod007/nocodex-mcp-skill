@@ -54,9 +54,11 @@ Do not use this skill to speculate about UI that has not been inspected. If the 
 - For common operating recipes: read `references/workflows.md`.
 - For NoCode-X platform concepts, Rocket Mode prompts, UI/data/action/job/security/testing patterns, read `references/platform-playbook.md`.
 - For official NoCode-X documentation notes useful for platform understanding and application planning, read `references/official-docs-planning.md`.
-- For the local source folder, tutorial/video indexes, and implementation-example source pointers, read `references/platform-tutorial-sources.md`.
-- For NoCode-X plugin research workflows and observed plugin inventories, read `references/plugins-catalog.md`; observed plugin details include `references/plugins/atlassian-trello-api.md`, `references/plugins/chat-logs.md`, `references/plugins/dropbox-api.md`, `references/plugins/google-api-integration.md`, `references/plugins/google-spreadsheet-api.md`, and `references/plugins/gemini-ai-api.md`.
+- For preparing this skill or related NoCode-X research notes as a public English GitHub repository, including transcript-source notices, redaction, repo metadata, checks, commit, and push handling, read `references/public-github-release.md`.
+- For the local source folder, tutorial/video indexes, and ingestion notes, read `references/platform-tutorial-sources.md`.
+
 - For planning existing-service migration, bridge/control-plane designs, or durable long-running jobs before NoCode-X sync, read `references/bridge-durable-job-planning.md`.
+- For planning production B2B/B2C SaaS account, organization, team, billing, roles, portal, and tenant-isolation structure inside a NoCode-X application, read `references/production-saas-template.md`.
 - For plugin/platform defects that should be reported to NoCode-X developers, read `references/plugin-developer-issues.md`.
 - If normal MCP tool calls fail but `hermes mcp test nocodex-mcp` succeeds, use `references/mcp-transport-fallback.md` for the direct registry-handler fallback pattern.
 - For ingesting local NoCode-X docs/tutorials into durable skill knowledge, read `references/platform-source-ingestion.md`.
