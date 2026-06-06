@@ -164,6 +164,7 @@ Path pattern:
 ```text
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
+tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
 ```
 
 User-provided transcript-derived notes from the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!` cover:
@@ -189,6 +190,20 @@ User-provided transcript-derived notes from `Vibecoding is Here: High-End Web De
 - scheduled agent tasks and custom cron expressions;
 - Generative Task / Observability views for agent status, cost, conversations, tool calls, and outcomes.
 
+User-provided transcript-derived notes from `1000+ AI Tools Connected: The Future of NoCode-X Agentic Workflows` cover:
+
+- Observability `Issues` for action problems such as missing required arguments and unused/dead-code invocations;
+- AI issue checking/repair after action changes;
+- action tests with parameter fixtures, execution traces, logs, and assertions;
+- `Side Effect Checks` for validating function invocations/writes/API calls, especially no-output actions;
+- centralized application-wide test overview and AI regression loop;
+- scheduled job observability, run durations, log filtering, and six-field custom cron syntax;
+- login-page routing pitfall: prefer dedicated `route to login` over generic page routing;
+- shared parent layout pages for child pages with common side navigation;
+- 1000+ external agent tools/toolkits and authentication flow;
+- internal agent tools as NoCode-X Actions;
+- agent Tasks/tool-call traces for debugging external/internal tool use, parameters, outputs, and token/cost pressure.
+
 Use this as source material for:
 
 - AI workflow debugging;
@@ -196,7 +211,11 @@ Use this as source material for:
 - media-library-based generated asset workflows;
 - prompt/model/cost observability checks;
 - vibe-coding validation workflows;
-- AI agent design, tool design, scheduled automation, and production hardening.
+- AI agent design, tool design, scheduled automation, and production hardening;
+- Issues/test/side-effect-check based AI development guardrails;
+- scheduled job observability and six-field cron reminders;
+- login/auth routing QA;
+- agent task/tool-call trace debugging and token-output minimization.
 
 ## Production And Advanced Guides Present In Source Folder
 

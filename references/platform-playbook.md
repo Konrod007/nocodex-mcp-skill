@@ -216,6 +216,63 @@ Production hardening reminders:
 - keep external tool permissions least-privilege;
 - monitor generative-task cost and tool-call failures.
 
+### Issues, Tests, Jobs, And 1000+ Agent Tools
+
+Source: user-provided transcript of the developer video `1000+ AI Tools Connected: The Future of NoCode-X Agentic Workflows`. Detailed notes: `references/source-materials/tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md`.
+
+The transcript expands the agentic platform model with stronger observability and testing primitives.
+
+Observed Issues / Observability behavior:
+
+- Observability now includes an `Issues` area for action problems;
+- examples include missing required arguments and unused/dead-code invocations;
+- major/bug issues can close while retaining trace/history;
+- smaller issues may disappear when fixed;
+- AI checks issues after changing actions and attempts to repair them.
+
+Observed action testing behavior:
+
+- actions can have configured tests with parameter values;
+- test runs show block execution order and per-block trace/error logs;
+- action outputs are name-based and should match variables produced by action functions;
+- assertions validate expected outputs;
+- newer/coming `Side Effect Checks` validate how functions were invoked, useful for no-output actions that write data, call APIs, or send emails;
+- an application-wide test overview can run all tests, one action's tests, or a single test;
+- AI is expected to run tests after changes and fix failures.
+
+Observed scheduled job behavior:
+
+- jobs execute scheduled logic periodically;
+- advanced custom cron uses six fields, not common five-field cron;
+- application logs have filters for environment, log level, page, action, amount, and a timeline/bar;
+- log-line lightning-bolt navigation opens the action that produced the log;
+- scheduled job observability shows individual job runs, times, and durations;
+- planned improvement: click a job run to see logs only for that exact run.
+
+Observed AI/auth/page hierarchy notes:
+
+- for login pages, prefer the dedicated `route to login` function rather than generic `route to page`, because login pages are special identity-provider pages;
+- test login flows in incognito/unauthenticated state and verify failed/timeout/email-sent status handling;
+- shared layout pages can act as parent pages for dashboard/profile/crew-style child pages with common side navigation.
+
+Observed agent/tool model:
+
+- NoCode-X claims 1000+ external tools/toolkits for agents;
+- external tools can require authentication, e.g. Gmail OAuth-style connection;
+- internal tools are NoCode-X Actions assigned to an agent;
+- example: agent reads Gmail, summarizes last email, then calls internal `add email to database` action to persist an `Email` record;
+- agent `Tasks`/Observability show conversation, tool search, external tool calls, internal tool calls, parameters, large outputs, and cost/credits;
+- large tool outputs can inflate input tokens/cost, so tool outputs should be minimized.
+
+Practical use:
+
+- Treat Issues + tests + side-effect checks as guardrails for AI/Rocket Mode changes and agent tools.
+- Test internal action tools before assigning them to agents.
+- Use narrow, typed, well-described agent tools with minimal outputs.
+- Verify actual side effects in data/logs/external systems instead of trusting agent summaries.
+- Do not enable schedules until issues/tests/observability are clean.
+- For app-health audits, inspect Issues, centralized tests, scheduled job runs, application logs, and generative task/tool-call traces together.
+
 ## Rocket Mode: Better Prompts
 
 Use Rocket Mode for app foundations and broad changes, but provide structured requirements.
