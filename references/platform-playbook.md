@@ -140,6 +140,31 @@ Practical use:
 - For mutating requests, gather facts first and make a precise builder request naming target objects and desired changes.
 - Remember that MCP facts and rendered UI facts can differ; label unavailable items as `Unknown` and verify important UI behavior in the browser/preview.
 
+### Next-Gen AI Workflows, Image Generation, OCR, And Observability
+
+Source: user-provided transcript of the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!`. Detailed notes: `references/source-materials/tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md`.
+
+The transcript says the existing `LLM completion request` now uses the same underlying infrastructure as Rocket Mode. It still supports user/assistant/system prompts, placeholder replacement, model selection, optional custom API tokens, and fallback to NoCode-X account credits. The practical platform change is more robust asynchronous generative-task execution, retry behavior, and centralized observability.
+
+Observed AI workflow capabilities from the transcript:
+
+- updated model catalog including newer Claude, Llama, Mistral, GPT, and related models;
+- LLM observability showing request prompt, generated answer, model/status, and credit cost;
+- image generation from a prompt, with placeholder support and optional file inputs;
+- generated images are automatically stored in the NoCode-X media library;
+- generated media can then be used in normal file workflows: display in UI, email, FTP/external upload, database storage, or downstream actions;
+- OCR over media-library files, demonstrated with an invoice;
+- OCR page selection through a page list/range-style input, with page zero used in the demo;
+- table output mode can be Markdown for most uses or HTML when visual/table structure matters.
+
+Practical use:
+
+- Debug AI workflows through generative-task observability before guessing from action logs alone.
+- For production AI flows, store business-relevant output and provenance in application data records: user, prompt, model, task/status, media ID, selected pages, OCR mode, and review/approval state.
+- Use image generation for placeholders, marketing assets, illustrations, and user-specific visuals, but add approval/content-safety controls before end-user exposure.
+- Use OCR as a first step in document-processing workflows: media file -> OCR Markdown/HTML -> LLM extraction/validation -> structured data -> review/approval -> external API/email/storage.
+- Verify page numbering, table output mode, model availability, API-token behavior, credit cost, and exact UI labels in the live editor before writing production instructions.
+
 ## Rocket Mode: Better Prompts
 
 Use Rocket Mode for app foundations and broad changes, but provide structured requirements.

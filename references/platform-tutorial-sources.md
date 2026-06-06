@@ -157,6 +157,30 @@ Use these as implementation examples for:
 - vector/search workflows;
 - external service integration patterns.
 
+### Developer Update Videos
+
+Path pattern:
+
+```text
+tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
+```
+
+User-provided transcript-derived notes from the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!` cover:
+
+- LLM completion requests moving onto Rocket Mode's asynchronous/retry-capable generative-task infrastructure;
+- updated model catalog across Claude, Llama, Mistral, GPT, and related families;
+- optional custom API token vs fallback to NoCode-X account credits;
+- generative-task observability for prompt, answer, model/status, and credit cost;
+- image generation with generated files automatically stored in the media library;
+- OCR over media-library files, page selection, and Markdown/HTML table output modes.
+
+Use this as source material for:
+
+- AI workflow debugging;
+- OCR/document-processing workflows;
+- media-library-based generated asset workflows;
+- prompt/model/cost observability checks.
+
 ## Production And Advanced Guides Present In Source Folder
 
 ### Production Essentials
