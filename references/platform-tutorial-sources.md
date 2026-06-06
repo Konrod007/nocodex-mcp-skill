@@ -165,6 +165,7 @@ Path pattern:
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
 tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
+tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md
 ```
 
 User-provided transcript-derived notes from the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!` cover:
@@ -204,6 +205,19 @@ User-provided transcript-derived notes from `1000+ AI Tools Connected: The Futur
 - internal agent tools as NoCode-X Actions;
 - agent Tasks/tool-call traces for debugging external/internal tool use, parameters, outputs, and token/cost pressure.
 
+User-provided transcript-derived notes from `NoCode-X Campfire: Q&A, New template engine & global variables in Actions` cover:
+
+- NoCode-X product direction as AI scaffold + visual no-code refinement, not pure one-shot AI app generation;
+- CodeGen-X direction: no-code abstraction -> generated codebase for stability, portability, library use, and performance;
+- Rocket Mode current page-first generation and future Vibe Mode conversational refinement;
+- LiquidJS template placeholder engine with filters, tags, conditionals, loops, list access, and backward-compatible old placeholders;
+- global variables becoming available in Actions through same-name parameters;
+- precedence rule: explicit template/action parameter values override same-name global variables;
+- Action subflows as organizational/comment-like sections rather than executable containers;
+- fixed-position UI behavior, dense-layout drag/drop workarounds, and template editor roadmap ideas;
+- Development vs Test/Acceptance/Production performance distinction;
+- DataTable client-side paging vs server-side paging for large datasets.
+
 Use this as source material for:
 
 - AI workflow debugging;
@@ -215,7 +229,12 @@ Use this as source material for:
 - Issues/test/side-effect-check based AI development guardrails;
 - scheduled job observability and six-field cron reminders;
 - login/auth routing QA;
-- agent task/tool-call trace debugging and token-output minimization.
+- agent task/tool-call trace debugging and token-output minimization;
+- LiquidJS placeholder/template-engine reviews;
+- global-variable-in-Action debugging, especially same-name parameter contracts and precedence;
+- CodeGen-X/export-roadmap discussions with current-capability caveats;
+- DataTable performance audits for client-side vs server-side paging;
+- Development vs promoted-environment performance explanations.
 
 ## Production And Advanced Guides Present In Source Folder
 

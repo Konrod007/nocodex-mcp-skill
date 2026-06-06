@@ -63,6 +63,7 @@ Do not use this skill to speculate about UI that has not been inspected. If the 
 - For recent AI/OCR/generative-task platform update notes, read `references/source-materials/tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md`.
 - For vibecoding, Intent Canvas, and AI agent platform update notes, read `references/source-materials/tutorials/VIBECODING-AI-AGENTS-NOCODEX.md`.
 - For 1000+ AI tools, Issues, tests, side-effect checks, scheduled job observability, and agent task traces, read `references/source-materials/tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md`.
+- For LiquidJS template placeholders, global variables in Actions, CodeGen-X direction, DataTable server-side paging, and Dev-vs-Production performance notes, read `references/source-materials/tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md`.
 - For plugin/platform defects that should be reported to NoCode-X developers, read `references/plugin-developer-issues.md`.
 - If normal MCP tool calls fail but `hermes mcp test nocodex-mcp` succeeds, use `references/mcp-transport-fallback.md` for the direct registry-handler fallback pattern.
 - For ingesting local NoCode-X docs/tutorials into durable skill knowledge, read `references/platform-source-ingestion.md`.

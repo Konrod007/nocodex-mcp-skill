@@ -94,6 +94,18 @@ Practical use:
 - Keep source-specific data separated even when joining; for position data, never collapse multiple sources into one global position unless a display rule explicitly chooses the source.
 - Test advanced queries with small known datasets first, then add filters and joins step by step.
 
+### DataTable performance and server-side paging
+
+Transcript-derived notes from a developer campfire explain that older/current DataTable paging can be client-side: the page loads all rows and then paginates in the browser. This is slow for large datasets such as tens of thousands of records.
+
+Practical use:
+
+- For large tables, avoid loading all rows into the browser.
+- Use server-side paging/filtering/sorting when available so each page retrieves only the needed rows, e.g. 20 records.
+- Combine DataTable paging with selected attributes and database-level filters/aggregations.
+- When diagnosing a slow table, check row count, query shape, selected attributes, joins, filters, and whether paging is client-side or server-side.
+- Treat simple server-side DataTable paging as transcript-derived/roadmap unless verified in the current app's function picker.
+
 ### Page-Level Action Parameter Values
 
 Actions linked from pages can now expose input fields for their defined parameters directly in the page/action binding settings. The transcript says:
@@ -114,11 +126,38 @@ Practical use:
 
 The transcript says Rocket Mode has improved logic generation, especially generating end-to-end logic with the built-in database from a zero-shot prompt. No concrete app example or acceptance data was provided in the transcript.
 
+Additional developer-campfire positioning:
+
+- NoCode-X is intentionally not positioned as pure one-shot AI app generation;
+- Rocket Mode should give a head start/scaffold that users refine through the no-code visual layer;
+- current Rocket Mode was described as page-first: root page, other pages, then hidden/generated logic behind those pages;
+- future `Vibe Mode` was described as conversational back-and-forth after Rocket Mode for incremental edits such as copy or style tweaks;
+- future AI scope is expected to include jobs, APIs, and more, not only pages, but verify live availability before relying on it.
+
 Practical use:
 
 - Rocket Mode may now be more useful for generating database-backed logic, but verify generated data formats, actions, bindings, issues, and logs before trusting the result.
 - Continue giving structured requirements: data model, pages, actions, roles, test data, and acceptance checks.
 - Treat Rocket Mode output as a draft that must be inspected and tested, not as automatically production-ready.
+- For builder prompts, include desired actions, jobs, APIs, data, rights, and test expectations instead of only visual pages.
+
+### CodeGen-X direction
+
+Transcript-derived developer notes describe the current model as a no-code/AI abstraction interpreted to serve the app in environments. `CodeGen-X` is the stated direction of generating a codebase from that abstraction.
+
+Stated reasons:
+
+- generated code should stay stable even after many NoCode-X platform upgrades;
+- generated code can run on NoCode-X or potentially on user-owned servers;
+- generated code unlocks broader use of libraries such as Tailwind and authentication libraries;
+- generated apps can become leaner and faster;
+- the visual no-code abstraction remains valuable and should not disappear.
+
+Practical use:
+
+- Treat CodeGen-X as strategic/roadmap context unless the target app/account has confirmed generated-code/export features.
+- In export/plugin audits, distinguish current verified export capability from future generated-code direction.
+- For production-risk discussions, CodeGen-X matters because it addresses platform-upgrade stability and performance concerns, but do not claim it is already available without evidence.
 
 ### MCP Tooling Expansion
 
@@ -338,6 +377,31 @@ Main vertical container
 
 For SVG icons, prefer `currentColor` for `stroke`/`fill` so icons follow theme/text color.
 
+For floating/sticky UI such as nav bars or chat launchers, the transcript-derived `position is fixed` style setting keeps an element visually in place while the page scrolls. Verify in Play/preview because the template editor may not fully demonstrate fixed-position behavior.
+
+### Template placeholders and LiquidJS
+
+Transcript-derived update notes say NoCode-X enhanced template placeholders with LiquidJS while keeping older pipe-based formatting backward compatible.
+
+Useful implications:
+
+- old placeholder pipes for formatting/fallbacks may still work;
+- LiquidJS filters can format values, e.g. conceptually `{{ name | capitalize }}`;
+- LiquidJS tags can support conditional/loop-like rendering in template text/title content;
+- list element access by index is possible according to the transcript;
+- dropdown choices can use placeholders, but replacement may occur in the rendered app rather than the template editor.
+
+Use LiquidJS for display formatting, fallback display text, small conditional strings, and simple list rendering. Avoid hiding complex business logic inside placeholders when an Action, database query, or action test would be clearer. In audits, inspect placeholder text because template content may contain meaningful logic that is not visible from the rendered label alone.
+
+### Dense layout editing
+
+For pages with many tightly packed elements, visual drag/drop can be jittery. Transcript-derived workarounds and roadmap notes:
+
+- use navigator/reorder controls when available instead of only the WYSIWYG canvas;
+- reorder handles may work inside a horizontal/vertical list even when cross-list moves are harder;
+- vertical/horizontal lists may grow while dragging over them to make dropping easier;
+- element locking and keyboard movement were discussed as ideas, but treat them as unavailable unless verified in the current UI.
+
 ### Naming conventions
 
 Clear names help both humans and AI tooling:
@@ -405,6 +469,46 @@ Modeling rule:
 
 Use Scope for intermediate action values. Use State for shared data such as theme, auth status, current role, balance or global filters.
 
+### Global variables in Actions
+
+Transcript-derived update notes say global variables can be accessed inside Actions by creating an Action parameter with exactly the same name as the global variable.
+
+Conceptual pattern:
+
+```text
+Action A sets global variable:
+name = "Tristan"
+
+Action B defines parameter:
+name
+
+Action B can use/log/reason with:
+name == "Tristan"
+```
+
+The transcript says this works for simple values and also nested objects/arrays.
+
+Important precedence rule:
+
+```text
+explicit template/action parameter value wins over same-name global variable
+```
+
+Resolution order from the transcript:
+
+1. if the page/template/action binding passes a parameter value, use that explicit value;
+2. otherwise, look up the same-name global variable.
+
+Debug checklist for wrong global/action values:
+
+1. Confirm the Action parameter name exactly matches the global variable name.
+2. Inspect page/template action-binding parameter values.
+3. Inspect inherited parent-template parameters.
+4. Inspect where the global variable is set.
+5. Check action logs/tests for the value actually received.
+
+Avoid generic global names such as `name`, `id`, `status`, or `value` when possible. Prefer namespaced conventions such as `auth.currentUser`, `ui.activeTab`, `filters.status`, or `cart.total`. Do not use global variables as a security boundary or durable database.
+
 ### Dynamic data population
 
 Typical page init:
@@ -464,6 +568,8 @@ Action editor concepts:
 - Action-specific tools: zoom, automatic block layout, and tests.
 
 Important rule: a function instance not reachable from the start block never executes and is effectively dead.
+
+Transcript-derived note: `subflow` in Actions is primarily an organization/commenting tool unless current live behavior proves otherwise. It can group coherent parts of an action such as `read from database`, `process data`, and `write to database`, but the transcript says it does not execute anything by itself. Use it to document large actions; do not assume it is an executable container or collapsible block unless verified.
 
 Action planning checklist:
 
@@ -736,6 +842,17 @@ Checklist:
 | Action not executing | trigger missing/disabled/condition false | trigger config, conditions, rights |
 | API 401/403 | missing/expired token or auth misconfig | Authorization header and API auth settings |
 | Slow app/query | inefficient query, missing pagination, too much data, or aggregation/join not pushed into the database query | logs, pagination, filters, selected attributes, aggregation/grouping/join settings |
+| Global variable ignored in Action | explicit page/template/action parameter with same name overrides the global variable | action parameter names, page binding parameter values, global variable setter |
+
+### Environment performance notes
+
+Transcript-derived developer notes say Development can be slower because NoCode-X must show the current application state without fully recompiling. When promoting to Test, Acceptance, or Production, NoCode-X creates a version and applies optimizations.
+
+Practical use:
+
+- Do not judge final production performance only from Development preview.
+- Still inspect app design: loading huge datasets, client-side DataTable paging, inefficient queries, or missing pagination can remain slow even in promoted environments.
+- For performance demos or acceptance checks, test the relevant promoted environment when possible.
 
 ### DTAP release pattern
 
