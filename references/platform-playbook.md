@@ -229,7 +229,21 @@ Practical use:
 - Cancel AI builds early if the output is going in the wrong direction to control credit spend.
 - For generated landing pages, review generated media, labels, alignment, responsiveness, CTA behavior, and form usability before production.
 
-Observed AI Agent model:
+Intent-first discovery/build notes from `Idea to App in 6 Questions` (`references/source-materials/tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md`):
+
+- The pre-build question flow is adaptive rather than hardcoded; the transcript says it usually asks about six to nine questions.
+- Generated intent text is stored context. Read/edit application, mission, persona, journey, functional, non-functional, folder-structure, look-and-feel, and design-system intents before building.
+- Edited intents are used by subsequent AI calls; if output is wrong, inspect whether an earlier intent contains the wrong assumption.
+- Personas can encode accessibility, security, and interaction constraints such as minimum 18px typography, single-column layout, and limited top-level navigation.
+- Customer journeys link personas to screen flows, validation steps, and conversion paths; the transcript shows an editable Mermaid/flow representation.
+- New apps have default application, design/design-system, and folder-structure intents; overwrite these deliberately for serious builds.
+- Folder-structure intent can steer single-page root organization or larger feature-based folders with pages/actions/database subareas.
+- Design intent describes mood/copy-level direction; the design system holds hard variables used by CSS/generation.
+- Level Three / Visual Development Mode can inventory generated databases, actions, components/pages, generated media, and form logic.
+- Generated websites can be dynamic: e.g. services database loaded by a page-load action and contact requests stored by a submit action.
+- QA generated apps for branding/name drift, stale journey assumptions after architecture changes, overbuilt sections, persona-avatar/UI bugs, data wiring, form validation, stored rows, Issues, logs, and accessibility constraints.
+
+Observed AI agent model:
 
 - an agent has name, daily budget, profile, avatar/image, and goal;
 - skills describe reusable procedures and can be shared across agents;

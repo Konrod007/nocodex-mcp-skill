@@ -165,6 +165,7 @@ Path pattern:
 tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
+tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md
 tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
 tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md
 ```
@@ -203,6 +204,21 @@ User-provided transcript-derived notes from `Vibecoding is Here: High-End Web De
 - scheduled agent tasks and custom cron expressions;
 - Generative Task / Observability views for agent status, cost, conversations, tool calls, and outcomes.
 
+User-provided transcript-derived notes from `Idea to App in 6 Questions: Building with NoCode-X` cover:
+
+- intent-first discovery before building, using adaptive follow-up questions rather than a fixed wizard;
+- editable/stored application, mission, persona, journey, functional, non-functional, folder-structure, look-and-feel, and design-system intents;
+- edited intents being reused by subsequent AI calls;
+- cancel button for stopping AI processing and controlling credit spend;
+- persona-derived accessibility/security/interaction constraints such as minimum typography size, single-column layout, and navigation limits;
+- customer journey mapping with persona actors, Mermaid-style editable flow, validation steps, and conversion paths;
+- manual intent creation and AI enhancement from user-written intent text;
+- folder-structure intent for single-page vs feature-based organization;
+- design intent vs hard design-system variables;
+- Level Three Intent Canvas / Visual Development Mode inventory of generated databases, actions, pages/components, generated media, contact form logic, and issue checks;
+- dynamic database-backed generated sites, including service data loaded on page load and contact requests stored on submit;
+- QA caveats such as branding/name drift, persona avatar bug, stale journey assumptions, and overbuilt sections.
+
 User-provided transcript-derived notes from `1000+ AI Tools Connected: The Future of NoCode-X Agentic Workflows` cover:
 
 - Observability `Issues` for action problems such as missing required arguments and unused/dead-code invocations;
@@ -240,6 +256,10 @@ Use this as source material for:
 - media-library-based generated asset workflows;
 - prompt/model/cost observability checks;
 - vibe-coding validation workflows;
+- intent-first discovery and pre-build spec reviews;
+- persona/customer-journey/functional/non-functional intent audits;
+- folder-structure and design-system intent reviews before generation;
+- generated-app QA for branding drift, dynamic data wiring, page-load actions, and form-submit storage;
 - AI agent design, tool design, scheduled automation, and production hardening;
 - Issues/test/side-effect-check based AI development guardrails;
 - scheduled job observability and six-field cron reminders;

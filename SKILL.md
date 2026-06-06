@@ -63,6 +63,7 @@ Do not use this skill to speculate about UI that has not been inspected. If the 
 - For recent Standard Page/dashboard, advanced database queries, page-level Action parameters, Rocket Mode logic, and MCP expansion notes, read `references/source-materials/tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md`.
 - For recent AI/OCR/generative-task platform update notes, read `references/source-materials/tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md`.
 - For vibecoding, Intent Canvas, and AI agent platform update notes, read `references/source-materials/tutorials/VIBECODING-AI-AGENTS-NOCODEX.md`.
+- For intent-first app discovery, six-to-nine-question build flow, editable personas/journeys/functional/non-functional intents, folder/design intents, and dynamic database-backed generated apps, read `references/source-materials/tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md`.
 - For 1000+ AI tools, Issues, tests, side-effect checks, scheduled job observability, and agent task traces, read `references/source-materials/tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md`.
 - For LiquidJS template placeholders, global variables in Actions, CodeGen-X direction, DataTable server-side paging, and Dev-vs-Production performance notes, read `references/source-materials/tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md`.
 - For plugin/platform defects that should be reported to NoCode-X developers, read `references/plugin-developer-issues.md`.
