@@ -166,6 +166,7 @@ tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
 tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md
+tutorials/CAMPFIRE-BUILDING-WITH-ROCKET-MODE.md
 tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
 tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md
 ```
@@ -219,6 +220,21 @@ User-provided transcript-derived notes from `Idea to App in 6 Questions: Buildin
 - dynamic database-backed generated sites, including service data loaded on page load and contact requests stored on submit;
 - QA caveats such as branding/name drift, persona avatar bug, stale journey assumptions, and overbuilt sections.
 
+User-provided transcript-derived notes from `NoCode-X Campfire: Building with Rocket Mode` cover:
+
+- direct realization-level building without mandatory full Intent Canvas planning;
+- folder-strategy intent for generated artifacts;
+- broad scaffold prompt pattern followed by small precise follow-up prompts;
+- AI to-do/progress list and token/credit considerations;
+- generated pages with standard editable components, local CSS, local JavaScript, animations, ticker footer, hover effects, and scanline/starfield effects;
+- media generation stored in the media library and inserted as NoCode-X media components;
+- prompt specificity through exact element/card/media/page/action names and selected-element scope;
+- chat memory/history caveats, prompt reuse, dictation, AI-change undo, before/after versions, and future branches;
+- CSS animations running in editor vs JavaScript behavior requiring live preview;
+- observability surfaces AI can or will use: logs, issues, tests, job runs;
+- realization graph levels and page -> action -> data edges with required-argument issue detection;
+- in-development/pre-production caveats, including server instability and a demo where AI page changes broke the page.
+
 User-provided transcript-derived notes from `1000+ AI Tools Connected: The Future of NoCode-X Agentic Workflows` cover:
 
 - Observability `Issues` for action problems such as missing required arguments and unused/dead-code invocations;
@@ -260,6 +276,11 @@ Use this as source material for:
 - persona/customer-journey/functional/non-functional intent audits;
 - folder-structure and design-system intent reviews before generation;
 - generated-app QA for branding drift, dynamic data wiring, page-load actions, and form-submit storage;
+- practical Rocket/Rocket Mode prompt iteration and selected-element scope reviews;
+- media-generation placement QA through media library and editable components;
+- CSS-vs-JavaScript animation verification in editor vs live preview;
+- AI undo/version/branch safety reviews;
+- realization graph debugging for page-action-data edges and missing required arguments;
 - AI agent design, tool design, scheduled automation, and production hardening;
 - Issues/test/side-effect-check based AI development guardrails;
 - scheduled job observability and six-field cron reminders;

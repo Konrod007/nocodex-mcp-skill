@@ -243,6 +243,21 @@ Intent-first discovery/build notes from `Idea to App in 6 Questions` (`reference
 - Generated websites can be dynamic: e.g. services database loaded by a page-load action and contact requests stored by a submit action.
 - QA generated apps for branding/name drift, stale journey assumptions after architecture changes, overbuilt sections, persona-avatar/UI bugs, data wiring, form validation, stored rows, Issues, logs, and accessibility constraints.
 
+Practical Rocket/Rocket Mode building notes from `NoCode-X Campfire: Building with Rocket Mode` (`references/source-materials/tutorials/CAMPFIRE-BUILDING-WITH-ROCKET-MODE.md`):
+
+- You can skip full canvas planning and build directly at realization level for prototypes, but serious builds still need post-generation canvas/app inspection.
+- Broad prompts are acceptable for initial scaffolds; follow-up changes should be small, precise, and reference exact element/card/media/page/action names.
+- Use selected-element scope as a guardrail: target the smallest relevant component for narrow changes, or the top-level container for page-wide changes.
+- Generated UI may include standard editable NoCode-X components plus local CSS/JavaScript; inspect the component tree, local styles, and local JS after generation.
+- CSS animations can run in the editor; JavaScript-driven behavior should be verified in live preview because JS is not executed in the editor.
+- For media generation, prefer generate/place one image at a time, verify media-library creation, then verify rendered placement as a media component.
+- Use the AI to-do/progress list, prompt reuse, cancel, and AI-change undo/versioning to control cost and blast radius.
+- Treat before/after app versions and future branches as important safety primitives for AI blocks of changes.
+- Use observability context — logs, Issues, tests, and job run logs — when asking AI to debug rather than relying on guesswork.
+- Use the realization graph to trace pages, actions, and data formats: page -> action trigger, action -> data read/write/update/delete, and missing required arguments.
+- Do not cite the login-flow portion as proof of a complete working AI-generated login flow; the demo was interrupted and partly manual.
+- Mark the demonstrated advanced Rocket/MCP builder features as in-development unless verified in the current production environment.
+
 Observed AI agent model:
 
 - an agent has name, daily budget, profile, avatar/image, and goal;
