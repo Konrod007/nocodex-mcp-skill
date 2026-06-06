@@ -162,11 +162,23 @@ Use these as implementation examples for:
 Path pattern:
 
 ```text
+tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
 tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
 tutorials/CAMPFIRE-TEMPLATE-ENGINE-GLOBAL-VARIABLES-ACTIONS.md
 ```
+
+User-provided transcript-derived notes from `NoCode-X Just Got Massive! 5 New Game-Changing Features (Rocket Mode, MCP Tools & More)` cover:
+
+- Standard Page / application dashboard for Visual Development entry;
+- recent versions and environment placement visibility;
+- urgent issues and latest log lines as first monitoring surface;
+- advanced built-in database queries through `get filtered` / `fetch a list of data records (new version)`;
+- selected attributes, SUM/AVG aggregations, grouping, distinct, aggregate filters, joins, join-on-join, OR filters, and joined-field filters;
+- page-level Action parameter values with placeholders/LiquidJS and backward-compatible automatic inheritance;
+- Rocket Mode logic-generation quality improvements for built-in-database-backed zero-shot flows;
+- expanded MCP tools for workspaces, applications, actions, TypeScript-like action visualization, issues, templates, data schemas, jobs, APIs, debugging, and builder changes.
 
 User-provided transcript-derived notes from the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!` cover:
 
@@ -221,6 +233,9 @@ User-provided transcript-derived notes from `NoCode-X Campfire: Q&A, New templat
 Use this as source material for:
 
 - AI workflow debugging;
+- Standard Page/dashboard-first app monitoring;
+- advanced built-in database query design with aggregations, aggregate filters, joins, nested joins, OR filters, and selected attributes;
+- page-level Action parameter binding reviews;
 - OCR/document-processing workflows;
 - media-library-based generated asset workflows;
 - prompt/model/cost observability checks;

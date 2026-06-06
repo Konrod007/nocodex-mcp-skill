@@ -60,6 +60,7 @@ Do not use this skill to speculate about UI that has not been inspected. If the 
 - For planning existing-service migration, bridge/control-plane designs, or durable long-running jobs before NoCode-X sync, read `references/bridge-durable-job-planning.md`.
 - For planning production B2B/B2C SaaS account, organization, team, billing, roles, portal, and tenant-isolation structure inside a NoCode-X application, read `references/production-saas-template.md`.
 - For evaluating the practical value and limits of GitHub/GitLab/repository-connected plugins, read `references/git-connected-plugin-value.md`.
+- For recent Standard Page/dashboard, advanced database queries, page-level Action parameters, Rocket Mode logic, and MCP expansion notes, read `references/source-materials/tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md`.
 - For recent AI/OCR/generative-task platform update notes, read `references/source-materials/tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md`.
 - For vibecoding, Intent Canvas, and AI agent platform update notes, read `references/source-materials/tutorials/VIBECODING-AI-AGENTS-NOCODEX.md`.
 - For 1000+ AI tools, Issues, tests, side-effect checks, scheduled job observability, and agent task traces, read `references/source-materials/tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md`.

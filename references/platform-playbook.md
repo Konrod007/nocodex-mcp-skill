@@ -50,7 +50,7 @@ Developer access rules:
 
 ## Recent Platform Update Notes
 
-Source: user-provided transcript of a NoCode-X update video dated by context as a fresh developer update. Treat these as platform notes from the transcript; verify in the live app or official docs before making production claims.
+Source: user-provided transcript of `NoCode-X Just Got Massive! 5 New Game-Changing Features (Rocket Mode, MCP Tools & More)`. Detailed notes: `references/source-materials/tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md`. Treat these as platform notes from the transcript; verify in the live app or official docs before making production claims.
 
 ### Standard Page / Application Dashboard
 
