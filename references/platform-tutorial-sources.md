@@ -163,6 +163,7 @@ Path pattern:
 
 ```text
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
+tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
 ```
 
 User-provided transcript-derived notes from the developer video `Massive NoCode-X Update: Next-Gen AI Workflows, World-Class OCR & MCP Integration!` cover:
@@ -174,12 +175,28 @@ User-provided transcript-derived notes from the developer video `Massive NoCode-
 - image generation with generated files automatically stored in the media library;
 - OCR over media-library files, page selection, and Markdown/HTML table output modes.
 
+User-provided transcript-derived notes from `Vibecoding is Here: High-End Web Design + AI Automation with NoCode-X` cover:
+
+- vibecoding / Rocket Mode conversational app building;
+- Intent Canvas as an intent-description and validation surface;
+- canvas nodes/edges for pages, data schemas, actions, agents, and their relationships;
+- object-level intent for pages/tables/logic;
+- switching between Rocket Mode and Visual Development Mode;
+- canceling AI builds to control scope/credits;
+- AI agents with name, daily budget, profile, avatar, goal, skills, and tools;
+- external SaaS tools such as Gmail/Outlook/YouTube/Twitter/X;
+- internal tools as NoCode-X Actions with inputs, outputs, and descriptions;
+- scheduled agent tasks and custom cron expressions;
+- Generative Task / Observability views for agent status, cost, conversations, tool calls, and outcomes.
+
 Use this as source material for:
 
 - AI workflow debugging;
 - OCR/document-processing workflows;
 - media-library-based generated asset workflows;
-- prompt/model/cost observability checks.
+- prompt/model/cost observability checks;
+- vibe-coding validation workflows;
+- AI agent design, tool design, scheduled automation, and production hardening.
 
 ## Production And Advanced Guides Present In Source Folder
 

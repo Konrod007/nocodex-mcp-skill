@@ -60,6 +60,8 @@ Do not use this skill to speculate about UI that has not been inspected. If the 
 - For planning existing-service migration, bridge/control-plane designs, or durable long-running jobs before NoCode-X sync, read `references/bridge-durable-job-planning.md`.
 - For planning production B2B/B2C SaaS account, organization, team, billing, roles, portal, and tenant-isolation structure inside a NoCode-X application, read `references/production-saas-template.md`.
 - For evaluating the practical value and limits of GitHub/GitLab/repository-connected plugins, read `references/git-connected-plugin-value.md`.
+- For recent AI/OCR/generative-task platform update notes, read `references/source-materials/tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md`.
+- For vibecoding, Intent Canvas, and AI agent platform update notes, read `references/source-materials/tutorials/VIBECODING-AI-AGENTS-NOCODEX.md`.
 - For plugin/platform defects that should be reported to NoCode-X developers, read `references/plugin-developer-issues.md`.
 - If normal MCP tool calls fail but `hermes mcp test nocodex-mcp` succeeds, use `references/mcp-transport-fallback.md` for the direct registry-handler fallback pattern.
 - For ingesting local NoCode-X docs/tutorials into durable skill knowledge, read `references/platform-source-ingestion.md`.

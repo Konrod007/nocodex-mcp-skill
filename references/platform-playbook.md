@@ -165,6 +165,57 @@ Practical use:
 - Use OCR as a first step in document-processing workflows: media file -> OCR Markdown/HTML -> LLM extraction/validation -> structured data -> review/approval -> external API/email/storage.
 - Verify page numbering, table output mode, model availability, API-token behavior, credit cost, and exact UI labels in the live editor before writing production instructions.
 
+### Vibecoding, Intent Canvas, And AI Agents
+
+Source: user-provided transcript of the developer video `Vibecoding is Here: High-End Web Design + AI Automation with NoCode-X`. Detailed notes: `references/source-materials/tutorials/VIBECODING-AI-AGENTS-NOCODEX.md`.
+
+The transcript demonstrates two related platform patterns:
+
+- vibecoding/Rocket Mode conversational app building;
+- AI agents that execute business workflows using skills, external tools, internal NoCode-X action tools, schedules, and observability.
+
+Observed Intent Canvas behavior:
+
+- helps describe build intent and validate whether AI honored it;
+- level 3 is shown as a validation level;
+- pages, data schemas/tables, actions/logic, and agents appear as nodes;
+- edges show relationships such as page -> action trigger and action -> database write;
+- object-level intent exists for pages, tables, and logic, and can be manually changed;
+- canvas supports folders, refresh, zoom/scroll, minimap, and visible workspace credit tracking.
+
+Practical use:
+
+- Use Intent Canvas as a non-code validation layer, but still test generated pages/actions/data with real runs and stored records.
+- Mix Rocket Mode and Visual Development Mode: use AI for scaffolding/broad changes and manual visual editing for precise UI polish.
+- Cancel AI builds early if the output is going in the wrong direction to control credit spend.
+- For generated landing pages, review generated media, labels, alignment, responsiveness, CTA behavior, and form usability before production.
+
+Observed AI Agent model:
+
+- an agent has name, daily budget, profile, avatar/image, and goal;
+- skills describe reusable procedures and can be shared across agents;
+- external tools connect to SaaS providers such as Gmail/Outlook/YouTube/Twitter/X and require authentication;
+- internal tools are NoCode-X Actions that can read/write data, use media library, call APIs, or perform other app logic;
+- tool input descriptions and output names matter because they guide the agent;
+- agents can be run manually through chat or through scheduled tasks such as daily/every 12 hours/every 6 hours/custom cron;
+- Generative Task / Observability views show status, credit cost, conversation, generated outputs, tool calls, tool success/failure, timestamps, and multi-agent overviews.
+
+Practical use:
+
+- Design agent tools as narrow, typed, well-described NoCode-X Actions.
+- Let skills explicitly name which tools to use and in what order.
+- Persist business-critical state in data records, not only in agent summaries or observability logs.
+- Verify actual side effects such as sent emails and updated records instead of trusting the final agent summary alone.
+- Start with manual agent chat/test records, then enable scheduled tasks with conservative frequency and budgets.
+
+Production hardening reminders:
+
+- add idempotency so the same record is not handled twice;
+- store reply text, sent timestamp, external message ID, agent run ID, error state, and handled/answered flags;
+- add human review and escalation rules for sensitive domains;
+- keep external tool permissions least-privilege;
+- monitor generative-task cost and tool-call failures.
+
 ## Rocket Mode: Better Prompts
 
 Use Rocket Mode for app foundations and broad changes, but provide structured requirements.
