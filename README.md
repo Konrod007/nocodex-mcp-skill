@@ -6,6 +6,10 @@ This repository is designed for AI agents and developers who need practical, evi
 
 > Status: unofficial, community-maintained, research-oriented. This repository is not affiliated with, endorsed by, or maintained by NoCode-X / Co-Dex.eu BV unless explicitly stated by them.
 
+## Community Overview
+
+For a community-facing explanation of what this repository contains and why it may be useful, see [`COMMUNITY.md`](COMMUNITY.md).
+
 ## What This Repository Contains
 
 - A Hermes `SKILL.md` for NoCode-X MCP workflows.
