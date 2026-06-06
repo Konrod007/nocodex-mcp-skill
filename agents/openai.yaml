@@ -1,0 +1,15 @@
+interface:
+  display_name: "NoCode-X MCP"
+  short_description: "Inspect and debug NoCode-X apps"
+  default_prompt: "Use $nocodex-mcp to inspect the current NoCode-X application and explain its APIs, schemas, actions, pages, jobs, logs, and issues."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "nocodex-mcp"
+      description: "NoCode-X MCP server for application inspection, debugging, logs, and builder tasks."
+      transport: "sse"
+      url: "https://back.nocode-x.com/sse"
+
+policy:
+  allow_implicit_invocation: true

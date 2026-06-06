@@ -1,0 +1,43 @@
+name: Repository checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  basic-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f SKILL.md
+          test -f README.md
+          test -f LICENSE
+          test -f NOTICE.md
+          test -f CONTRIBUTING.md
+          test -f SECURITY.md
+      - name: Check skill frontmatter
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p = Path('SKILL.md')
+          text = p.read_text(encoding='utf-8')
+          assert text.startswith('---'), 'SKILL.md must start with frontmatter'
+          assert re.search(r'\n---\s*\n', text[3:]), 'SKILL.md frontmatter must close'
+          assert 'name:' in text[:1000], 'name field missing'
+          assert 'description:' in text[:2000], 'description field missing'
+          print('SKILL.md basic validation passed')
+          PY
+      - name: Secret keyword smoke test
+        run: |
+          set +e
+          grep -RInE --exclude-dir=.git '(BEGIN (RSA|OPENSSH|PRIVATE) KEY|mcp_auth|\.env)' .
+          status=$?
+          if [ "$status" = "0" ]; then
+            echo 'Potential high-risk secret artifact found. Review output above.'
+            exit 1
+          fi
+          exit 0

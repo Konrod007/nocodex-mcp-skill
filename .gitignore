@@ -1,0 +1,35 @@
+# Secrets and credentials
+.env
+.env.*
+mcp_auth.json
+*mcp_auth*.json
+credentials.json
+*credentials*.json
+cookies.json
+*cookies*.json
+sessions/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Local/private work artifacts
+execution/
+.sisyphus/
+_temp*
+backup/
+backups/
+
+# Logs and cache
+*.log
+.cache/
+__pycache__/
+node_modules/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
