@@ -31,13 +31,43 @@ jobs:
           assert 'description:' in text[:2000], 'description field missing'
           print('SKILL.md basic validation passed')
           PY
-      - name: Secret keyword smoke test
+      - name: Secret artifact smoke test
         run: |
-          set +e
-          grep -RInE --exclude-dir=.git '(BEGIN (RSA|OPENSSH|PRIVATE) KEY|mcp_auth|\.env)' .
-          status=$?
-          if [ "$status" = "0" ]; then
-            echo 'Potential high-risk secret artifact found. Review output above.'
-            exit 1
-          fi
-          exit 0
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          tracked = [Path(p) for p in Path('.').rglob('*') if '.git' not in p.parts and p.is_file()]
+
+          high_risk_paths = []
+          for p in tracked:
+              name = p.name.lower()
+              if name == '.env' or name.startswith('.env.'):
+                  high_risk_paths.append(str(p))
+              if re.fullmatch(r'.*mcp_auth.*\.json', name):
+                  high_risk_paths.append(str(p))
+
+          private_key_hits = []
+          key_re = re.compile(r'BEGIN (RSA|OPENSSH|PRIVATE) KEY')
+          for p in tracked:
+              try:
+                  text = p.read_text(encoding='utf-8', errors='ignore')
+              except Exception:
+                  continue
+              if key_re.search(text):
+                  private_key_hits.append(str(p))
+
+          if high_risk_paths or private_key_hits:
+              if high_risk_paths:
+                  print('High-risk secret artifact paths found:')
+                  for item in high_risk_paths:
+                      print(f'  {item}')
+              if private_key_hits:
+                  print('Private key material found in:')
+                  for item in private_key_hits:
+                      print(f'  {item}')
+              sys.exit(1)
+
+          print('No high-risk secret artifacts found')
+          PY
