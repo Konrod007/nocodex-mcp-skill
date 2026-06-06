@@ -165,6 +165,7 @@ Path pattern:
 tutorials/NOCODEX-MASSIVE-5-FEATURES-ROCKET-MCP.md
 tutorials/MASSIVE-NOCODE-X-UPDATE-AI-OCR-MCP.md
 tutorials/VIBECODING-AI-AGENTS-NOCODEX.md
+tutorials/CAMPFIRE-INTRODUCTION-AI-INTENT-CANVAS.md
 tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md
 tutorials/CAMPFIRE-BUILDING-WITH-ROCKET-MODE.md
 tutorials/AI-TOOLS-AGENTIC-WORKFLOWS-NOCODEX.md
@@ -204,6 +205,21 @@ User-provided transcript-derived notes from `Vibecoding is Here: High-End Web De
 - internal tools as NoCode-X Actions with inputs, outputs, and descriptions;
 - scheduled agent tasks and custom cron expressions;
 - Generative Task / Observability views for agent status, cost, conversations, tool calls, and outcomes.
+
+User-provided transcript-derived notes from `Campfire 02/03 - New features & bugfixed + Introduction to AI Intent canvas` cover:
+
+- product rationale for Intent Canvas as a replacement/evolution of old Rocket Mode and an alternative to unread AI code-diff acceptance;
+- intent-vs-reality validation as a non-code review surface for human- or AI-created apps;
+- three canvas levels: application/mission/look-and-feel/design foundations, persona/journey dynamics, and realization inventory/graph;
+- AI enhancement of stored intents with manual correction before saving;
+- design-system preview and manual color/typography controls;
+- personas as actors plus demographic/UI/UX context, not only user roles;
+- customer journeys as editable intent flows that guide later page/action generation;
+- new chatbot-like AI agent with memory, intent extraction, and broad app-building tool scope;
+- generated content-management example with ideas folder, content ideas schema, tags many-to-many relationship, layout/dashboard/search/capture planning;
+- realization graph edges that label page/action/data behavior such as fetch/write, enabling quick behavior review without reading generated code;
+- observability feedback loop: logs/audit logs/issues/production errors fed back into AI repair;
+- MCP exposure, bring-your-own-key direction, and distinction between simple AI calls and future true tool-calling agents.
 
 User-provided transcript-derived notes from `Idea to App in 6 Questions: Building with NoCode-X` cover:
 
@@ -272,6 +288,10 @@ Use this as source material for:
 - media-library-based generated asset workflows;
 - prompt/model/cost observability checks;
 - vibe-coding validation workflows;
+- intent-vs-reality reviews when AI generated too much code/UI to inspect manually;
+- three-level Intent Canvas audits: foundations, dynamics, realization;
+- observability-feedback repair workflows using logs, audit logs, issues, and production errors;
+- MCP/BYO-key/tool-calling roadmap discussions with current-capability caveats;
 - intent-first discovery and pre-build spec reviews;
 - persona/customer-journey/functional/non-functional intent audits;
 - folder-structure and design-system intent reviews before generation;

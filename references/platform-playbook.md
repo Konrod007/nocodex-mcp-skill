@@ -229,6 +229,19 @@ Practical use:
 - Cancel AI builds early if the output is going in the wrong direction to control credit spend.
 - For generated landing pages, review generated media, labels, alignment, responsiveness, CTA behavior, and form usability before production.
 
+Foundational Intent Canvas notes from `Campfire 02/03 - Introduction to AI Intent Canvas` (`references/source-materials/tutorials/CAMPFIRE-INTRODUCTION-AI-INTENT-CANVAS.md`):
+
+- Intent Canvas is positioned as a way to validate intent against app reality when reading AI-generated code or manually clicking every flow does not scale.
+- Treat saved intent as stored product context/guardrails, not a disposable prompt.
+- Use the three-level model when auditing apps: foundations (application, mission, look-and-feel, design), dynamics (personas and journeys), realization (actual folders/pages/schemas/actions/APIs/jobs and their graph edges).
+- AI-enhanced intent is only a draft; manually correct it before using it to drive generation.
+- Personas are actors plus demographic/UI/UX constraints; check generated UI against persona needs, not only role names.
+- Customer journeys should guide generated pages/actions and remain editable when the product flow changes.
+- In realization view, prefer graph/edge review for broad behavior understanding: page -> action, action -> data read/write/update/delete, then test critical flows.
+- Use observability as feedback for AI repair: logs, audit logs, issues, static warnings such as possible null-pointer cases, and production errors should become debugging context.
+- Distinguish current sequential AI-call workflows from future true tool-calling agents; verify live tool-call traces before claiming agentic behavior.
+- Treat MCP exposure and bring-your-own-AI-key support as roadmap/current-environment-dependent unless verified in the live product.
+
 Intent-first discovery/build notes from `Idea to App in 6 Questions` (`references/source-materials/tutorials/IDEA-TO-APP-6-QUESTIONS-INTENT-CANVAS.md`):
 
 - The pre-build question flow is adaptive rather than hardcoded; the transcript says it usually asks about six to nine questions.
