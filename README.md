@@ -35,7 +35,7 @@ Clone this repository into your Hermes skills directory:
 ```bash
 # Windows Git Bash example
 mkdir -p '/c/Users/<user>/AppData/Local/hermes/skills/mcp'
-git clone https://github.com/<owner>/nocodex-mcp-skill.git \
+git clone https://github.com/Konrod007/nocodex-mcp-skill.git \
   '/c/Users/<user>/AppData/Local/hermes/skills/mcp/nocodex-mcp'
 ```
 
